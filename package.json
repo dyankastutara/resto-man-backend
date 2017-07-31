@@ -1,0 +1,35 @@
+{
+  "name": "rest-man-api",
+  "version": "0.0.1",
+  "description": "services for rest man api",
+  "main": "app.js",
+  "repository": "https://github.com/hakiemaul/rest-man-api.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "./node_modules/.bin/sequelize db:seed --seed 20170717062133-DeleteAllTable.js &&./node_modules/.bin/sequelize db:migrate && ./node_modules/.bin/sequelize db:seed --seed 20170713061659-DummyRole.js && ./node_modules/.bin/sequelize db:seed --seed 20170713094930-DummyEmployee.js",
+    "test": "./node_modules/.bin/sequelize db:seed --seed 20170717062133-DeleteAllTable.js &&./node_modules/.bin/sequelize db:migrate && ./node_modules/.bin/sequelize db:seed --seed 20170713061659-DummyRole.js && ./node_modules/.bin/sequelize db:seed --seed 20170713094930-DummyEmployee.js && ./node_modules/.bin/sequelize db:seed --seed 20170717122806-CategoryMenu.js && mocha"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "chai": "^4.1.0",
+    "chai-http": "^3.0.0",
+    "cors": "^2.8.3",
+    "cron": "^1.2.1",
+    "database-cleaner": "^1.2.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "kue": "^0.11.6",
+    "mocha": "^3.4.2",
+    "mongoose": "^4.11.3",
+    "nodemailer": "^4.0.1",
+    "pg": "^6.4.0",
+    "pg-hstore": "^2.3.2",
+    "queue": "^4.2.1",
+    "sequelize": "^4.3.1",
+    "sequelize-cli": "^2.7.0"
+  }
+}
